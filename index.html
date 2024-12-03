@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Deformable Neural Radiance Fields creates free-viewpoint portraits (nerfies) from casually captured videos.">
+  <meta name="keywords" content="Nerfies, D-NeRF, NeRF">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>VideoGen-of-Thought: A Collaborative Framework for Multi-Shot Video Generation</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<!-- <nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+  </div>
+</nav> -->
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">VideoGen-of-Thought: A Collaborative Framework for Multi-Shot Video Generation</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://www.linkedin.com/in/mingzhe-zheng-874247259/">Mingzhe Zheng</a><sup>1,7</sup>,</span>
+            <span class="author-block">
+              <a href="https://cheliosoops.github.io/YongqiXu.io/">Yongqi Xu</a><sup>2,7</sup>,</span>
+            <span class="author-block">
+              <a href="https://scholar.google.com.hk/citations?user=ab5uUAcAAAAJ&hl">Haojian Huang</a><sup>3</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://github.com/GeekGuru123">Xuran Ma</a><sup>1,7</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=Y8zBpcoAAAAJ&hl=zh-CN&oi=sra">Ye xin Liu</a><sup>1,7</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://orcid.org/0009-0005-4066-3372">Wen-Jie Shu</a><sup>1,7</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://cde.nus.edu.sg/">Yatian Pang</a><sup>4</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?hl=en&user=Z5BHRAYAAAAJ">Feilong Tang</a><sup>5,7</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://cqf.io/">Qifeng Chen</a><sup>1,7</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://leehomyc.github.io/">Harry Yang</a><sup>1,7</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://sites.google.com/site/sernam">Ser-Nam Lim</a><sup>6,7</sup>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>Hong Kong University of Science and Technology,</span>
+            <span class="author-block"><sup>2</sup>Peking University,</span>
+            <span class="author-block"><sup>3</sup>University of Hong Kong,</span>
+            <span class="author-block"><sup>4</sup>National University of Singapore,</span>
+            <span class="author-block"><sup>5</sup>Monash University,</span>
+            <span class="author-block"><sup>6</sup>University of Central Florida,</span>
+            <span class="author-block"><sup>7</sup>Everlyn Al</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="https://arxiv.org/pdf/2011.12948"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2011.12948"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Video Link. -->
+              <span class="link-block">
+                <a href="https://www.youtube.com/watch?v=phOudWRD4NI"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/google/nerfies"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop"> 
+    <div class="hero-body">
+      <img src="./static/images/Illustration.jpg" alt="Teaser Image" style="height: 100%; width: auto;"> 
+      <h2 class="subtitle has-text-left" style="font-size: 1.1em;">
+        <p><strong>Illustration of <em>VideoGen-of-Thought (VGoT)</em>.</strong> 
+        <strong>(a) Comparison of existing methods with <em>VGoT</em><span style="color: white;">a</span>in multi-shot video generation.</strong> 
+        Existing methods struggle with maintaining consistency and logical coherence across multiple shots, while <em>VGoT</em> effectively addresses these challenges through a multi-shot generation approach. 
+        <strong>(b) Overview of our proposed framework <em>VGoT</em>,</strong> which consists of the <em>Script Module</em> that generates detailed shot descriptions from five domains, the <em>KeyFrame Module</em> to create keyframes from scripts, the <em>Shot-Level Video Module</em> which synthesizes video latents conditioned on keyframes and scripts, and the <em>Smooth Module</em> ensures seamless transitions across shots, resulting in a cohesive video narrative.</span>
+        </p>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Current video generation models excel at generating short clips but still struggle with creating multi-shot, movie-like videos. Existing models trained on large-scale data on the back of rich computational resources are unsurprisingly inadequate for maintaining a logical storyline and visual consistency across multiple shots of a cohesive script since they are often trained with a single-shot objective.
+To this end, we propose <em>VideoGen-of-Thought (VGoT)</em>, a collaborative and training-free architecture designed specifically for multi-shot video generation. <em>VGoT</em> is designed with three goals in mind as follows.
+<strong>Multi-Shot Video Generation</strong>: We divide the video generation process into a structured, modular sequence, including (1) Script Generation, which translates a curt story into detailed prompts for each shot; (2) Keyframe Generation, responsible for creating visually consistent keyframes faithful to character portrayals; and (3) Shot-Level Video Generation, which transforms information from scripts and keyframes into shots; (4) Smoothing Mechanism that ensures a consistent multi-shot output.
+<strong>Reasonable Narrative Design</strong>: Inspired by cinematic scriptwriting, our prompt generation approach spans five key domains, ensuring logical consistency, character development, and narrative flow across the entire video.
+<strong>Cross-Shot Consistency</strong>: We ensure temporal and identity consistency by leveraging identity-preserving (IP) embeddings across shots, which are automatically created from the narrative. 
+Additionally, we incorporate a cross-shot smoothing mechanism, which integrates a reset boundary that effectively combines latent features from adjacent shots, resulting in smooth transitions and maintaining visual coherence throughout the video.
+Our experiments demonstrate that <em>VGoT</em> surpasses existing video generation methods in producing high-quality, coherent, multi-shot videos. The code will be made publicly available.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+    <!-- Paper video. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Video</h2>
+        <div class="publication-video">
+          <iframe src="https://www.youtube.com/embed/phOudWRD4NI?rel=0&showinfo=0"
+                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+    <!--/ Paper video. -->
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <!-- Animation. -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Method: VideoGen-of-Thought</h2>
+        <div class="container is-max-desktop"> 
+          <div class="hero-body">
+            <img src="./static/images/Flowchart-v2.jpg" alt="Teaser Image" style="height: 100%; width: auto;"> 
+            <h2 class="subtitle has-text-left" style="font-size: 1.1em;">
+              <p>
+                <strong>The FlowChart of <em>VideoGen-of-Thought.</em></strong>
+                <strong>Left:</strong> Shot descriptions are generated based on user prompts, describing various attributes such as character details, background, relations, and camera pose. Pre-shot descriptions provide a broader context for the upcoming scenes.
+                <strong>Middle Top:</strong> Keyframes are generated using a text-to-image diffusion model conditioned with identity-preserving (IP) embeddings, which ensures consistent representation of characters throughout the shots. IP portraits help maintain visual identity consistency.
+                <strong>Right:</strong> The shot-level video clips are generated from keyframes, followed by shot-by-shot smooth inference to ensure temporal consistency across different shots. This collaborative framework ultimately produces a cohesive narrative-driven video.               
+              </p>
+          </div>
+        </div>
+        <br/>
+
+
+        <div class="columns is-centered">
+          <div class="column is-full-width">
+            <h2 class="title is-3">Gallery</h2>
+            <br/>
+
+        <!-- Re-rendering. -->
+        <h2 class="title is-4">Visual comparison of <em>VGoT</em> and baselines:</h2>
+        <div class="content has-text-justified">
+          <img src="./static/images/VGoT_vs.png" alt="Teaser Image" style="height: 100%; width: auto;"> 
+        </div>
+        
+
+        <h2 class="title is-4">Visual showcases of <em>VGoT</em> generated multi-shot videos:</h2>
+        <div class="content has-text-justified">
+          <img src="./static/images/VGoT.png" alt="Teaser Image" style="height: 100%; width: auto;"> 
+        </div>
+      
+        <!--/ Re-rendering. -->
+
+      </div>
+    </div>
+    <!--/ Animation. -->
+
+
+  
+
+  </div>
+</section>
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{park2021nerfies,
+  author    = {Park, Keunhong and Sinha, Utkarsh and Barron, Jonathan T. and Bouaziz, Sofien and Goldman, Dan B and Seitz, Steven M. and Martin-Brualla, Ricardo},
+  title     = {Nerfies: Deformable Neural Radiance Fields},
+  journal   = {ICCV},
+  year      = {2021},
+}</code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link"
+         href="./static/videos/nerfies_paper.pdf">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+          <p>
+            This means you are free to borrow the <a
+              href="https://github.com/nerfies/nerfies.github.io">source code</a> of this website,
+            we just ask that you link back to this page in the footer.
+            Please remember to remove the analytics code included in the header of the website which
+            you do not want on your website.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
