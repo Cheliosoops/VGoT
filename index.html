@@ -235,6 +235,165 @@ Our experiments demonstrate that <em>VGoT</em> surpasses existing video generati
         <div class="content has-text-justified">
           <img src="./static/images/VGoT.png" alt="Teaser Image" style="height: 100%; width: auto;"> 
         </div>
+        <h2 class="title is-4">Evaluation examples of Different Models:</h2>
+
+        <table class="evaluation-table" style="border-collapse: collapse;"> <!-- 去除单元格之间的间距 -->
+          <!-- 第一行：方法描述 -->
+          <tr> 
+            <td class="content-cell" style="text-align: center; padding: 0;"> <!-- 去除单元格内的填充 -->
+              <p style="margin: 0;"><strong>Method</strong></p>
+            </td>
+            <td class="content-cell" style="text-align: center; padding: 0;">
+              <p style="margin: 0; font-size: 8pt;"><strong>"A set of one-sentence prompts, 30 shots, describe the story of Marco, a chef who stumbles upon ancient secrets through culinary discoveries."</strong></p>
+            </td>
+            <td class="content-cell" style="text-align: center; padding: 0;">
+              <p style="margin: 0; font-size: 8pt;"><strong>"A set of one-sentence prompts, 30 shots, describe the life of Dr. Sarah, a scientist, dedicated to finding a cure for a rare disease."</strong></p>
+            </td>
+          </tr>          
+          <tr>
+            <td class="content-cell" style="text-align: center; padding: 0;">
+              <p style="margin: 0;"><strong><br><br><br><br>VideoCrafter1</strong></p>
+            </td>
+            <td class="content-cell" style="padding: 0;">
+              <video controls style="width: 425px; height: 240px; object-fit: contain; display: block; margin: 0;">
+                <source src="./static/videos/VideoCrafter1_chef.mp4" type="video/mp4">
+              </video>
+            </td>
+            <td class="content-cell" style="padding: 0;">
+              <video controls style="width: 425px; height: 240px; object-fit: contain; display: block; margin: 0;">
+                <source src="./static/videos/VideoCrafter1_scientist.mp4" type="video/mp4">
+              </video>
+            </td>            
+          </tr>
+          <tr>
+            <td class="content-cell" style="text-align: center; padding: 0;">
+              <p style="margin: 0;"><strong><br><br><br><br>VideoCrafter2</strong></p>
+            </td>
+            <td class="content-cell" style="padding: 0;">
+              <video controls style="width: 425px; height: 240px; object-fit: contain; display: block; margin: 0;">
+                <source src="./static/videos/VideoCrafter2_chef.mp4" type="video/mp4">
+              </video>
+            </td>
+            <td class="content-cell" style="padding: 0;">
+              <video controls style="width: 425px; height: 240px; object-fit: contain; display: block; margin: 0;">
+                <source src="./static/videos/VideoCrafter2_scientist.mp4" type="video/mp4">
+              </video>
+            </td>            
+          </tr>
+          <tr>
+            <td class="content-cell" style="text-align: center; padding: 0;">
+              <p style="margin: 0;"><strong><br><br><br><br>EasyAnimate</strong></p>
+            </td>
+            <td class="content-cell" style="padding: 0;">
+              <video controls style="width: 425px; height: 240px; object-fit: contain; display: block; margin: 0;">
+                <source src="./static/videos/EasyAnimate_chef.mp4" type="video/mp4">
+              </video>
+            </td>
+            <td class="content-cell" style="padding: 0;">
+              <video controls style="width: 425px; height: 240px; object-fit: contain; display: block; margin: 0;">
+                <source src="./static/videos/EasyAnimate_scientist.mp4" type="video/mp4">
+              </video>
+            </td>            
+          </tr>
+          <tr>
+            <td class="content-cell" style="text-align: center; padding: 0;">
+              <p style="margin: 0;"><strong><br><br><br><br>CogVideo</strong></p>
+            </td>
+            <td class="content-cell" style="padding: 0;">
+              <video controls style="width: 425px; height: 240px; object-fit: contain; display: block; margin: 0;">
+                <source src="./static/videos/CogVideo_chef.mp4" type="video/mp4">
+              </video>
+            </td>
+            <td class="content-cell" style="padding: 0;">
+              <video controls style="width: 425px; height: 240px; object-fit: contain; display: block; margin: 0;">
+                <source src="./static/videos/CogVideo_scientist.mp4" type="video/mp4">
+              </video>
+            </td>            
+          </tr>
+          <tr>
+            <td class="content-cell" style="text-align: center; padding: 0;">
+              <p style="margin: 0;"><strong><br><br><br><br>VGoT</strong></p>
+            </td>
+            <td class="content-cell" style="padding: 0;">
+              <video controls style="width: 425px; height: 240px; object-fit: contain; display: block; margin: 0;">
+                <source src="./static/videos/VGoT_dynamicrafter_vgot_chef_1024_mp_seed123.mp4" type="video/mp4">
+              </video>
+            </td>
+            <td class="content-cell" style="padding: 0;">
+              <video controls style="width: 425px; height: 240px; object-fit: contain; display: block; margin: 0;">
+                <source src="./static/videos/VGoT_dynamicrafter_vgot_scientist_1024_mp_seed123.mp4" type="video/mp4">
+              </video>
+            </td>            
+          </tr>
+        </table>
+        <br>
+
+        <h2 class="title is-4">Evaluation examples of <em>VGoT</em> :</h2>
+
+        <table class="evaluation-table" style="border-collapse: collapse;"> <!-- 去除单元格之间的间距 -->
+          <!-- 第一行：方法描述 -->
+          <tr> 
+            <td class="content-cell" style="text-align: center; padding: 0;">
+              <p style="margin: 0; font-size: 8pt;"><strong>"A set of one-sentence prompts, 30 shots, describe the story of Marco, a chef who stumbles upon ancient secrets through culinary discoveries."</strong></p>
+            </td>
+            <td class="content-cell" style="text-align: center; padding: 0;">
+              <p style="margin: 0; font-size: 8pt;"><strong>"A set of one-sentence prompts, 30 shots, describe the story of Marco, a chef who stumbles upon ancient secrets through culinary discoveries."</strong></p>
+            </td>
+          </tr>          
+          <tr>
+            <td class="content-cell" style="padding: 0; text-align: center;">
+              <video controls style="width: 430px; height: 260px; object-fit: contain; display: inline-block; margin: 0;">
+                <source src="./static/videos/VGoT/VGoT_dynamicrafter_vgot_artist_1024_mp_seed123.mp4" type="video/mp4">
+              </video>
+            </td>
+            <td class="content-cell" style="padding: 0; text-align: center; vertical-align: middle;">
+              <video controls style="width: 430px; height: 260px; object-fit: contain; display: inline-block; margin: 0;">
+                <source src="./static/videos/VGoT/VGoT_dynamicrafter_vgot_botanist_1024_mp_seed123.mp4" type="video/mp4">
+              </video>
+            </td>        
+          </tr>
+          <tr> 
+            <td class="content-cell" style="text-align: center; padding: 0;">
+              <p style="margin: 30; font-size: 8pt;"><strong>"A set of one-sentence prompts, 30 shots, describe the life of Dr. Sarah, a scientist, dedicated to finding a cure for a rare disease."</strong></p>
+            </td>
+            <td class="content-cell" style="text-align: center; padding: 0;">
+              <p style="margin: 30; font-size: 8pt;"><strong>"A set of one-sentence prompts, 30 shots, describe the life of Olivia, an ambitious fashion designer, from her first sketches to her iconic fashion show."</strong></p>
+            </td>
+          </tr>
+          <tr>
+            <td class="content-cell" style="padding: 0; text-align: center;">
+              <video controls style="width: 430px; height: 260px; object-fit: contain; display: inline-block; margin: 0;">
+                <source src="./static/videos/VGoT/VGoT_dynamicrafter_vgot_cyclist_1024_mp_seed123.mp4" type="video/mp4">
+              </video>
+            </td> 
+            <td class="content-cell" style="padding: 0; text-align: center; vertical-align: middle;">
+              <video controls style="width: 430px; height: 260px; object-fit: contain; display: inline-block; margin: 0;">
+                <source src="./static/videos/VGoT/VGoT_dynamicrafter_vgot_fashion_designer_1024_mp_seed123.mp4" type="video/mp4">
+              </video>
+            </td>               
+          </tr>
+          <tr> 
+            <td class="content-cell" style="text-align: center; padding: 0;">
+              <p style="margin: 30; font-size: 8pt;"><strong>"A set of one-sentence prompts, 30 shots, describe the life of Lily, a young pianist, as she grows from a novice to a world-class musician.
+                "</strong></p>
+            </td>
+            <td class="content-cell" style="text-align: center; padding: 0;">
+              <p style="margin: 30; font-size: 8pt;"><strong>"A set of one-sentence prompts, 30 shots, describe the journey of Isaac, an AI developer who accidentally creates an AI with human emotions and a consciousness of its own."</strong></p>
+            </td>
+          </tr>
+          <tr>
+            <td class="content-cell" style="padding: 0; text-align: center;">
+              <video controls style="width: 430px; height: 260px; object-fit: contain; display: inline-block; margin: 0;">
+                <source src="./static/videos/VGoT/VGoT_dynamicrafter_vgot_pianist_1024_mp_seed123.mp4" type="video/mp4">
+              </video>
+            </td> 
+            <td class="content-cell" style="padding: 0; text-align: center; vertical-align: middle;">
+              <video controls style="width: 430px; height: 260px; object-fit: contain; display: inline-block; margin: 0;">
+                <source src="./static/videos/VGoT/VGoT_dynamicrafter_vgot_technologist_1024_mp_seed123.mp4" type="video/mp4">
+              </video>
+            </td>               
+          </tr>    
+        </table>
       
         <!--/ Re-rendering. -->
 
